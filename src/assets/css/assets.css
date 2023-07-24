@@ -1,0 +1,346 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+:root {
+  --black: #111414;
+  --white: #fff;
+  --gray: #52525233;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+
+/* always display scrollbars */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Tektur", cursive;
+  font-weight: 300;
+  font-size: 12px;
+  background: url("/bg.jpeg");
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+section {
+  margin: 100px 0 100px 0;
+}
+
+section:first-child {
+  margin: 0 0 50px 0 !important;
+}
+
+.container {
+  max-width: 1160px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d_flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.d_flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.d_grid {
+  display: grid;
+}
+
+.d_none {
+  display: none;
+}
+
+.g_col_2 {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.f_grow {
+  flex-grow: 2;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.j_between {
+  justify-content: space-between;
+}
+
+.j_around {
+  justify-content: space-around;
+}
+
+.j_start {
+  justify-content: flex-start;
+}
+
+.j_end {
+  justify-content: flex-end;
+}
+
+.j_center {
+  justify-content: center;
+}
+
+.a_start {
+  align-items: flex-start;
+}
+
+.a_end {
+  align-items: flex-end;
+}
+
+.a_center {
+  align-items: center;
+}
+
+.a_stretch {
+  align-items: stretch;
+}
+
+.a_baseline {
+  align-items: baseline;
+}
+
+.t_center {
+  text-align: center !important;
+}
+
+.t_left {
+  text-align: left !important;
+}
+
+.t_right {
+  text-align: right !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.button_a {
+  background: var(--white);
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s all;
+  color: var(--black);
+  cursor: pointer;
+}
+.button_a:hover {
+  background: #1f1f1f;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.button_b {
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--white);
+  background: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s all;
+  color: var(--white);
+  cursor: pointer;
+}
+.button_b:hover {
+  background: #1f1f1f;
+  color: var(--white);
+}
+
+.h1_title {
+  color: var(--white, #FFF);
+  font-size: 48px;
+  font-weight: 700;
+}
+@media (max-width: 680px) {
+  .h1_title {
+    font-size: 44px;
+    font-weight: 700;
+  }
+}
+
+.h2_title {
+  color: var(--white, #FFF);
+  font-size: 30px;
+  line-height: 37px;
+}
+@media (max-width: 680px) {
+  .h2_title {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+.h3_title {
+  color: var(--white, #FFF);
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 24px;
+}
+@media (max-width: 680px) {
+  .h3_title {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=assets.css.map */
