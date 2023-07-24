@@ -1,59 +1,7 @@
 import './assets/css/assets.css'
 import './index.css'
-import React, { useState } from 'react'
-
-const DATA = [
-  {
-    question: 'вопрос 1',
-    answers: [
-      {
-        id: '1',
-        value: 'Я гей',
-        point: 1,
-      },
-      {
-        id: '2',
-        value: 'Я лесбиянка',
-        point: 2,
-      },
-      {
-        id: '3',
-        value: 'Ответ 3',
-        point: 3,
-      },
-      {
-        id: '4',
-        value: 'Ответ 4',
-        point: 4,
-      }
-    ]
-  },
-  {
-    question: 'вопрос 2',
-    answers: [
-      {
-        id: '1',
-        value: 'Свежие трусы',
-        point: 1,
-      },
-      {
-        id: '2',
-        value: 'Мокрые трусы',
-        point: 2,
-      },
-      {
-        id: '3',
-        value: 'Гаф',
-        point: 3,
-      },
-      {
-        id: '4',
-        value: 'Дилюк',
-        point: 4,
-      }
-    ]
-  }
-]
+import quizData from './quiz.json'
+import React, { useState, useEffect } from 'react'
 
 function App() {
   const [showQuiz, setShowQuiz] = useState(false)
@@ -72,20 +20,27 @@ function App() {
 
 function Quiz() {
   const [count, setCount] = useState(0)
+  const [score, setScore] = useState(0)
+  
+  useEffect(() => {
+    let random = Math.floor(Math.random() * 10); 
+    setScore(score + random)
+    console.log(score)
+  }, [count])
 
   return (
     <div className="main flex flex-col justify-center items-center h-screen w-screen">
       <div className="window flex flex-col justify-center items-center p-4 bg-white rounded-xl max-w-2xl">
         
         <img src="/genshin-logo.png" alt="" className='w-2/3 rounded-2xl mb-2'/>
-        <h1 className='h1_title text-black text-center'>{DATA[count].question}</h1>
+        <h1 className='h1_title text-black text-center'>{quizData[count].question}</h1>
         <p className='mb-12 text-xl'>{count} из 50</p>
 
         <div className="grid gap-4 grid-cols-2 grid-rows-2">
-          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{DATA[count].answers[0].value}</button>
-          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{DATA[count].answers[1].value}</button>
-          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{DATA[count].answers[2].value}</button>
-          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{DATA[count].answers[3].value}</button>
+          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{quizData[count].answers[0].value}</button>
+          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{quizData[count].answers[0].value}</button>
+          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{quizData[count].answers[0].value}</button>
+          <button onClick={() => setCount(count + 1)} className='glow-on-hover text-xl bg-cyan-950 text-white py-2 px-20 rounded-xl border-solid'>{quizData[count].answers[0].value}</button>
         </div>
 
       </div>
