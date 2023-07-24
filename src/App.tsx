@@ -33,7 +33,7 @@ const DATA = [
     answers: [
       {
         id: '1',
-        value: 'Фак',
+        value: 'Свежие трусы',
         point: 1,
       },
       {
@@ -43,12 +43,12 @@ const DATA = [
       },
       {
         id: '3',
-        value: 'Ответ 7',
+        value: 'Гаф',
         point: 3,
       },
       {
         id: '4',
-        value: 'Ответ 8',
+        value: 'Дилюк',
         point: 4,
       }
     ]
